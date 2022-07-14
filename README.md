@@ -7,19 +7,20 @@ Procedure oriented programming basically consist of writing a list of instructio
 
 **The disadvantages of the procedure oriented programming languages are:** 
 
-Global data access
-It does not model real word problem very well
-No data hiding
+* Global data access
+* It does not model real word problem very well
+* No data hiding
+
 ![4_1625237179899](https://user-images.githubusercontent.com/59107332/178967618-065eeea2-9130-4033-9344-c0e824c9f024.png)
 
 **Characteristics of procedure oriented programming:**
 
-Emphasis is on doing things (algorithms).
-Large programs are divided into smaller programs known as **functions**.
-Most of the functions **share global data**.
-Data move openly around the system from function to function.
-Function transforms data from one form to another.
-Employs **top-down approach** in program design
+* Emphasis is on doing things (algorithms).
+* Large programs are divided into smaller programs known as **functions**.
+* Most of the functions **share global data**.
+* Data move openly around the system from function to function.
+* Function transforms data from one form to another.
+* Employs **top-down approach** in program design
 
 # Object Oriented Programming
 In **traditional programming**, programs are basically lists of instructions to the computer that define data and then work with that data (via statements and functions). Data and the functions that work on that data are **separate entities** that are combined together to produce the desired result. Because of this separation, traditional programming often does not provide a very intuitive representation of reality. It’s up to the programmer to manage and connect the properties (variables) to the behaviors (functions) in an appropriate manner. This leads to code that looks like this:
@@ -46,10 +47,10 @@ Object-Oriented Programming (OOP) provides us with the ability to create objects
 you.driveTo(work);
  ```
 
-This not only reads more clearly, it also makes it clearer who the subject is (you) and what behavior is being invoked (driving somewhere). 
-Rather than being focused on writing functions, we’re focused on defining objects that have a **well-defined set of behaviors**. This is why the paradigm is called “object-oriented”.
-This allows programs to be written in a more modular fashion, which makes them easier to write and understand, and also provides a higher degree of code-reusability. 
-These objects also provide a more intuitive way to work with our data by allowing us to define how we interact with the objects, and how they interact with other objects.
+* This not only reads more clearly, it also makes it clearer who the subject is (you) and what behavior is being invoked (driving somewhere). 
+* Rather than being focused on writing functions, we’re focused on defining objects that have a **well-defined set of behaviors**. This is why the paradigm is called “object-oriented”.
+* This allows programs to be written in a more modular fashion, which makes them easier to write and understand, and also provides a higher degree of code-reusability. 
+* These objects also provide a more intuitive way to work with our data by allowing us to define how we interact with the objects, and how they interact with other objects.
 Note that OOP doesn’t replace traditional programming methods. Rather, it gives you additional tools in your programming tool belt to manage complexity when needed.
 
 Object-oriented programming also brings several other useful concepts to the table: **inheritance, encapsulation, abstraction, and polymorphism**. 
@@ -65,10 +66,10 @@ class class-name{
 	// Public functions and variables
 } object-list;
 ```
-In a class declaration, the object list is **optional**. 
-The class name is technically optional. From a practical point of view, it is virtually always needed. The reason is that the class name becomes a new type name that is used to declare objects of the class. 
-Functions and variables declared inside the class declaration are said to be **members** of the class.
-By default, **all member functions and variables are private** to that class. This means that they are accessible only by other members of that class. 
+* In a class declaration, the object list is **optional**. 
+* The class name is technically optional. From a practical point of view, it is virtually always needed. The reason is that the class name becomes a new type name that is used to declare objects of the class. 
+* Functions and variables declared inside the class declaration are said to be **members** of the class.
+* By default, **all member functions and variables are private** to that class. This means that they are accessible only by other members of that class. 
 To declare public class members, the **public** keyword is used, followed by a colon. All functions and variables declared after the public specifier are accessible both by other members of the class and by any part of the program that contains the class. 
 ```cpp
 #include <bits/stdc++.h>
@@ -85,9 +86,9 @@ class myclass {
 };
 int main() { return 0; }
 ```
-This class has one private variable, called **a**, and two public functions **set_a()** and **get_a()**. 
-Notice that the functions are declared within a class using their prototype forms. The functions that are declared to be part of a class are called member functions. 
-Since **a** is private it is not accessible by any code outside myclass. However, since set_a() and get_a() are members of **myclass**, they have access to **a** and as they are declared as public member of **myclass**, they can be called by any part of the program that contains **myclass**.
+* This class has one private variable, called **a**, and two public functions **set_a()** and **get_a()**. 
+* Notice that the functions are declared within a class using their prototype forms. The functions that are declared to be part of a class are called member functions. 
+* Since **a** is private it is not accessible by any code outside myclass. However, since set_a() and get_a() are members of **myclass**, they have access to **a** and as they are declared as public member of **myclass**, they can be called by any part of the program that contains **myclass**.
 The member functions need to be defined. You do this by preceding the function name with the class name followed by two colons (:: are called scope resolution operator). For example, after the class declaration, you can declare the member functions as
 ```cpp
 #include <bits/stdc++.h>
@@ -135,9 +136,9 @@ int main() {
    return 0;
 }
 ```
-Remember that an object declaration creates a physical entity of that type. That is, **an object occupies memory space, but a type definition does not**. 
-Once an object of a class has been created, your program can reference its public members by using the dot operator in much the same way that structure members are accessed as shown above. 
-It is important to remember that although all objects of a class share their functions, each object creates and maintains its own data. 
+* Remember that an object declaration creates a physical entity of that type. That is, **an object occupies memory space, but a type definition does not**. 
+* Once an object of a class has been created, your program can reference its public members by using the dot operator in much the same way that structure members are accessed as shown above. 
+* It is important to remember that although all objects of a class share their functions, each object creates and maintains its own data. 
 
 # Constructors, destructors, and inheritance
 It is possible for the base class, the derived class, or both to have constructor and/or destructor functions. When a base class and a derived cl#ass both have constructor and destructor functions, the constructor functions are executed in order of derivation. **The destructor functions are executed in reverse order**. 
